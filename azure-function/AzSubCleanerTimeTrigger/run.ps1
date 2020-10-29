@@ -1,7 +1,7 @@
 # Input bindings are passed in via param block.
 param($Timer)
 
-# Get the current universal time in the default string format
+# Get the current universal time in the default string formattt
 $currentUTCtime = (Get-Date).ToUniversalTime()
 
 $expResources= Search-AzGraph -Query 'where todatetime(tags.expireOn) < now() | project id'
