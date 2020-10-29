@@ -7,6 +7,7 @@ $currentUTCtime = (Get-Date).ToUniversalTime()
 $expResources= Search-AzGraph -Query 'where todatetime(tags.expireOn) < now() | project id'
 foreach ($r in $expResources) {
     Write-Host "Expired Resource ID=" + $r.id
+    Write-Host "This is a new comment"
     Remove-AzResource -ResourceId $r.id -Force # -WhatIf #Add/Remove WhatIf when in Test/Production
 }
 
