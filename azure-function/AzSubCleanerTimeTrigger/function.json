@@ -5,6 +5,12 @@
       "type": "timerTrigger",
       "direction": "in",
       "schedule": "0 30 * * * *"
+    },
+    {
+      "name": "5MinTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 5 * * * *"
     }
   ]
 }
